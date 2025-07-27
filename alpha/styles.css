@@ -115,6 +115,9 @@ img {
 #time {
   margin-top: 0.5rem;
 }
+.locale {
+  margin-top: 0.5rem;
+}
 li {
   list-style: none;
   margin-bottom: 0.5rem;
@@ -218,7 +221,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-family: "Courier New", monospace; 
+  font-family: "Courier New", monospace;
   font-size: 0.9rem;
   letter-spacing: 0.05em;
   color: #1a1a1a;
@@ -239,4 +242,21 @@ a {
   display: inline-block;
   margin: 0 0.3rem;
   color: #111;
+}
+.light {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  animation: pulseOpacity 1.2s infinite ease-in-out;
+}
+
+@keyframes pulseOpacity {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
