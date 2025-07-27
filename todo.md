@@ -1,0 +1,2 @@
+- Add an about me section
+- Add menu button functionality
