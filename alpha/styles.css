@@ -29,33 +29,46 @@
   transition: 0.3s;
 }
 
-.navbar div {
-  backdrop-filter: blur(30px);
+.navbar-items {
+  backdrop-filter: blur(0);
   background: none;
   font-weight: 700;
   font-size: x-large;
+}
+.navbar a {
+  text-decoration: none;
+  background: none;
+}
+.navbar a div {
+  backdrop-filter: blur(0);
+  background: none;
 }
 /* Section Styling */
 .hero {
   justify-content: space-between;
   height: 100vh;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 /* scrolling behaviour */
 .figure {
   height: 60vh;
+  width: 100%;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   font-size: 19rem;
 }
 .footer {
   height: 30vh;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 /* Projects Section */
 
 .project {
   height: 100vh;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 img {
   width: 100%;
@@ -94,13 +107,109 @@ img {
 .footer .links {
   flex: 1;
 }
+
 .footer .status {
   flex: 1;
   text-align: end;
 }
+#time {
+  margin-top: 0.5rem;
+}
 li {
   list-style: none;
+  margin-bottom: 0.5rem;
 }
 a {
   text-decoration: none;
+}
+/* overview Section */
+.overview {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.overview h1 {
+  padding: 1rem;
+  width: 50%;
+  font-weight: 600;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  padding: 10vh 5vw;
+  max-width: 800px;
+}
+
+.question {
+  font-family: "monospace", sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: -2px;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.answer {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 60ch;
+  font-weight: 500;
+}
+/* Experience Section */
+
+.experience {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.experiences {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 10rem;
+  gap: 4rem;
+}
+
+.meta {
+  flex: 1;
+}
+
+.meta h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.meta h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.duration {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.details {
+  flex: 2;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 40rem;
+}
+
+.stack {
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #111;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #aaa;
 }

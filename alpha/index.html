@@ -18,17 +18,36 @@
   </head>
   <body>
     <div class="navbar">
-      <div class="material-symbols-outlined">bolt</div>
-      <div class="menu">MENU</div>
+      <a href="#hero">
+        <div class="material-symbols-outlined">bolt</div>
+      </a>
+      <div class="navbar-items">MENU</div>
     </div>
     <main class="scroll-container">
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="tagline">
           <h1>
             BOLD AESTHETICS <br />
             SOLID CODE
           </h1>
         </div>
+      </section>
+      <hr />
+      <section class="experience">
+        <h1>EXPERIENCE</h1>
+        <div class="experiences">
+          <div class="meta">
+            <h2>NAVIKENZ</h2>
+            <h3>DATA & AI INTERN</h3>
+            <div class="duration">May - July 2025</div>
+          </div>
+          <div class="details">
+            Prototyped a system to map unstructured doctor reports to MedDRA terms using retrieval-augmented generation on a pgvector-backed knowledge base.
+          <div class="stack">Tech Stack: Sveltekit, FastAPI, PGVector, Docker Compose</div>
+          </div>
+          </div>
+        </div>
+      </div>
       </section>
       <hr />
       <div class="project">
@@ -42,30 +61,39 @@
         </div>
         <h3>EXOPLANET ANALYSIS</h3>
       </div>
-      <hr />
-      <div class="project">
-        <div class="project-images">
-          <div class="image-big">
-            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
-          </div>
-          <div class="image-small">
-            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
-          </div>
+      <hr>
+      <section class="overview">
+        <h1>OVERVIEW</h1>
+        <div class="question">What I do</div>
+        <div class="answer">
+          I design and build fullstack applications and AI-driven tools that are
+          both functional and intentional.
         </div>
-        <h3>EXOPLANET ANALYSIS</h3>
-      </div>
-      <hr />
-      <div class="project">
-        <div class="project-images">
-          <div class="image-big">
-            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
-          </div>
-          <div class="image-small">
-            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
-          </div>
+        <div class="question">How it helps</div>
+        <div class="answer">
+          I help ideas take shape — from concept to interface — ensuring the
+          execution matches the ambition.
         </div>
-        <h3>EXOPLANET ANALYSIS</h3>
-      </div>
+        <div class="question">Who I work best with</div>
+        <div class="answer">
+          I work well with founders, engineers, or teams who value clarity,
+          adaptability, and clean architecture over off-the-shelf solutions.
+        </div>
+        <div class="question">When to involve me</div>
+        <div class="answer">
+          When you're building something new, uncertain, or layered — and want a
+          system that scales without becoming a mess.
+        </div>
+        <div class="question">What I bring</div>
+        <div class="answer">
+          A hybrid skillset spanning backend engineering, frontend design, and
+          applied AI — with a bias toward shipping.
+        </div>
+        <div class="answer">   </div>
+        <div class="answer">   </div>
+        <div class="answer">   </div>
+        <div class="answer">   </div>
+      </section>
       <hr />
       <section class="footer">
         <div class="version">VERSION 0.1</div>
@@ -83,7 +111,7 @@
           </ul>
         </div>
         <div class="status">
-          Currently: OFF DUTY <br />
+          CURRENTLY: OFF DUTY <br />
           <div id="time"></div>
         </div>
       </section>
@@ -101,7 +129,7 @@
 
         document.getElementById(
           "time"
-        ).textContent = `${bangaloreTime},  Bangalore`;
+        ).textContent = `${bangaloreTime},  BANGALORE`;
       }
 
       updateBangaloreTime();
