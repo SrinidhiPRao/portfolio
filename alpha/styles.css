@@ -128,7 +128,7 @@ a {
   scroll-snap-stop: always;
 }
 .overview h1 {
-  padding: 1rem;
+  padding: 0 1rem;
   width: 50%;
   font-weight: 600;
 }
@@ -212,4 +212,31 @@ a {
   margin-top: 1rem;
   padding-left: 1rem;
   border-left: 2px solid #aaa;
+}
+
+.project-meta-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Courier New", monospace; 
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: #1a1a1a;
+  padding: 0.5rem 0;
+  max-width: 100%;
+}
+
+.project-title {
+  font-weight: 600;
+}
+
+.project-scope {
+  font-weight: 500;
+  color: #333;
+}
+
+.dot {
+  display: inline-block;
+  margin: 0 0.3rem;
+  color: #111;
 }
