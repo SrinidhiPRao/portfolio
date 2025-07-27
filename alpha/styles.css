@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #1d1d1d;
+  background-color: #ebebeb;
+  font-family: "Roboto";
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  width: 25vw;
+  bottom: 5vh;
+  left: 37.5vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: rgba(191, 191, 191, 0.45);
+  backdrop-filter: blur(30px);
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.navbar div {
+  backdrop-filter: blur(30px);
+  background: none;
+  font-weight: 700;
+  font-size: x-large;
+}
+/* Section Styling */
+.hero {
+  justify-content: space-between;
+  height: 100vh;
+}
+/* Projects Section */
+.projects {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.project {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+.project-images {
+  height: 70%;
+  display: flex;
+}
+.image-big {
+  padding: 0.5rem 0.25rem 0.5rem 0.5rem;
+  flex: 2;
+  height: 100%;
+}
+.image-small {
+  padding: 0.5rem 0.5rem 0.5rem 0.25rem;
+  height: 100%;
+  flex: 1;
+  height: 70vh;
+}
+/* Hero Section */
+.tagline h1 {
+  font-size: 8rem;
+}
+/* Footer Section */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
