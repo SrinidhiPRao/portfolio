@@ -17,20 +17,20 @@
     />
   </head>
   <body>
-    <section class="hero">
-      <div class="tagline">
-        <h1>
-          BOLD AESTHETICS <br />
-          SOLID CODE
-        </h1>
-      </div>
-    </section>
     <div class="navbar">
       <div class="material-symbols-outlined">bolt</div>
       <div class="menu">MENU</div>
     </div>
-    <hr />
-    <section class="projects">
+    <main class="scroll-container">
+      <section class="hero">
+        <div class="tagline">
+          <h1>
+            BOLD AESTHETICS <br />
+            SOLID CODE
+          </h1>
+        </div>
+      </section>
+      <hr />
       <div class="project">
         <div class="project-images">
           <div class="image-big">
@@ -42,43 +42,70 @@
         </div>
         <h3>EXOPLANET ANALYSIS</h3>
       </div>
+      <hr />
+      <div class="project">
+        <div class="project-images">
+          <div class="image-big">
+            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
+          </div>
+          <div class="image-small">
+            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
+          </div>
+        </div>
+        <h3>EXOPLANET ANALYSIS</h3>
+      </div>
+      <hr />
+      <div class="project">
+        <div class="project-images">
+          <div class="image-big">
+            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
+          </div>
+          <div class="image-small">
+            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
+          </div>
+        </div>
+        <h3>EXOPLANET ANALYSIS</h3>
+      </div>
+      <hr />
+      <section class="footer">
+        <div class="version">VERSION 0.1</div>
+        <div class="links">
+          <ul>
+            <li>
+              <a href="#">LINKEDIN</a>
+            </li>
+            <li>
+              <a href="#">GITHUB</a>
+            </li>
+            <li>
+              <a href="#">LEETCODE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="status">
+          Currently: OFF DUTY <br />
+          <div id="time"></div>
+        </div>
+      </section>
+      <section class="figure">SRINIDHI</section>
+    </main>
+    <script>
+      function updateBangaloreTime() {
+        const now = new Date();
+        const bangaloreTime = now.toLocaleString("en-IN", {
+          timeZone: "Asia/Kolkata",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        });
 
-      <div class="project">
-        <div class="project-images">
-          <div class="image-big">
-            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
-          </div>
-          <div class="image-small">
-            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
-          </div>
-        </div>
-        <h3>EXOPLANET ANALYSIS</h3>
-      </div>
+        document.getElementById(
+          "time"
+        ).textContent = `${bangaloreTime},  Bangalore`;
+      }
 
-      <div class="project">
-        <div class="project-images">
-          <div class="image-big">
-            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
-          </div>
-          <div class="image-small">
-            <img src="../static/QuadrantWebsite.png" alt="Project Demo" />
-          </div>
-        </div>
-        <h3>EXOPLANET ANALYSIS</h3>
-      </div>
-    </section>
-    <hr />
-    <section class="footer">
-      <div class="version">VERSION 0.1</div>
-      <div class="links">
-        <ul>
-          <li>LINKEDIN</li>
-          <li>GITHUB</li>
-          <li>LEETCODE</li>
-        </ul>
-      </div>
-      <div class="status">Currently: OFF DUTY</div>
-    </section>
-    <section class="figure"></section>
+      updateBangaloreTime();
+      setInterval(updateBangaloreTime, 59999);
+    </script>
   </body>
 </html>

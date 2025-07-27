@@ -7,7 +7,11 @@
   font-family: "Roboto";
   scroll-behavior: smooth;
 }
-
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+}
 /* Navbar Styling */
 .navbar {
   position: fixed;
@@ -35,13 +39,20 @@
 .hero {
   justify-content: space-between;
   height: 100vh;
+  scroll-snap-align: start;
+}
+/* scrolling behaviour */
+.figure {
+  height: 60vh;
+  scroll-snap-align: start;
+  font-size: 19rem;
+}
+.footer {
+  height: 30vh;
+  scroll-snap-align: start;
 }
 /* Projects Section */
-.projects {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
+
 .project {
   height: 100vh;
   scroll-snap-align: start;
@@ -76,4 +87,20 @@ img {
   display: flex;
   justify-content: space-between;
   margin: 1rem;
+}
+.footer .version {
+  flex: 2;
+}
+.footer .links {
+  flex: 1;
+}
+.footer .status {
+  flex: 1;
+  text-align: end;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
 }
