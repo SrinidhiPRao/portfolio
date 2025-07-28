@@ -1,8 +1,10 @@
-# TO DO 
-- Add an about me page
+# VERSION 1.0
+
+- Change the project small image.
 - Add a contact me page.
+- Add a blogs page.
 - Add responsiveness for mobile devices.
-- Fix the sizing of the overview text.
 
 # DONE
+
 - Add menu button functionality.
