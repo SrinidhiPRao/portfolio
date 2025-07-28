@@ -40,6 +40,9 @@
 .hero {
   justify-content: space-between;
   height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -241,7 +244,7 @@ a {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #0bda51;
   animation: blink 1.3s steps(1, start) infinite;
 }
 
@@ -323,4 +326,35 @@ a {
   .menu-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* About Me in Hero */
+.identity-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: none;
+  /* padding: 1.2rem 2rem; */
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #111;
+  flex-wrap: wrap;
+  margin: 1rem 1rem;
+}
+
+.identity-left,
+.identity-center,
+.identity-right {
+  flex: 1 1 30%;
+  padding: 0.5rem;
+}
+
+.identity-center {
+  text-align: center;
+  color: #444;
+  min-height: 2rem;
+}
+
+.identity-right {
+  text-align: right;
 }
