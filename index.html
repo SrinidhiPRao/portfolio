@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SRINIDHI'S PORTFOLIO</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=bolt" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="#hero">
+      <div class="material-symbols-outlined">bolt</div>
+    </a>
+    <button class="menu-btn" onclick="toggleMenu()">MENU</button>
+  </div>
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-container">
+      <div class="menu-grid">
+        <a href="#hero" class="menu-box">HOME</a>
+        <a href="#project" class="menu-box">PROJECTS</a>
+        <a href="#experience" class="menu-box">EXPERIENCE</a>
+        <a href="#footer" class="menu-box">CONTACT</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="scroll-container">
+    <section class="hero" id="hero">
+      <div class="tagline">
+        <h1>
+          BOLD AESTHETICS <br />
+          SOLID CODE
+        </h1>
+      </div>
+      <div class="identity-bar">
+        <div class="identity-left">
+          SRINIDHI P RAO ● SENIOR AT VIT VELLORE
+        </div>
+
+        <div class="identity-center">
+          <!-- Placeholder  -->
+        </div>
+
+        <div class="identity-right status">
+          CURRENTLY: <span class="light"></span> AVAILABLE FOR WORK <br />
+        </div>
+      </div>
+
+    </section>
+    <hr />
+    <section class="experience" id="experience">
+      <h1>EXPERIENCE</h1>
+      <div class="experiences">
+        <div class="meta">
+          <h2>NAVIKENZ</h2>
+          <h3>DATA & AI INTERN</h3>
+          <div class="duration">May - July 2025</div>
+        </div>
+        <div class="details">
+          Prototyped a system to map medical reports to MedDRA terms using retrieval-augmented generation on
+          a pgvector-backed knowledge base.
+          <div class="stack">Tech Stack: Sveltekit, FastAPI, PGVector, Google Gemini</div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+    <hr />
+    <a href="https://github.com/SrinidhiPRao/Quadrant" class="project-link" target="_blank" rel="noopener noreferrer">
+      <div class="project" id="project">
+        <div class="project-images">
+          <div class="image-big">
+            <img src="./static/QuadrantWebsite.png" alt="Project Demo" />
+          </div>
+          <div class="image-small">
+            <img src="./static/QuadrantMobileEdited.png" alt="Project Demo" />
+          </div>
+        </div>
+    </a>
+    <div class="project-meta-line">
+      <span class="project-title">QUADRANT</span>
+      <span class="project-scope">
+        SCOPE <span class="dot">●</span> (ML, DATA VIS, WEB)
+      </span>
+      <a class="github-link" href="https://github.com/SrinidhiPRao/Quadrant" target="_blank" rel="noopener noreferrer">
+        View on GitHub ↗
+      </a>
+    </div>
+    </div>
+    <hr>
+    <section class="overview">
+      <h1>OVERVIEW</h1>
+      <div class="question">What I do</div>
+      <div class="answer">
+        I design and build fullstack applications and AI-driven tools that are
+        both functional and intentional.
+      </div>
+      <div class="question">How it helps</div>
+      <div class="answer">
+        I help ideas take shape — from concept to interface — ensuring the
+        execution matches the ambition.
+      </div>
+      <div class="question">Who I work best with</div>
+      <div class="answer">
+        I work well with founders, engineers, or teams who value clarity,
+        adaptability, and clean architecture over off-the-shelf solutions.
+      </div>
+      <div class="question">When to involve me</div>
+      <div class="answer">
+        When you're building something new, uncertain, or layered — and want a
+        system that scales without becoming a mess.
+      </div>
+      <div class="question">What I bring</div>
+      <div class="answer">
+        A hybrid skillset spanning backend engineering, frontend design, and
+        applied AI — with a bias toward shipping.
+      </div>
+      <div class="answer"> </div>
+      <div class="answer"> </div>
+      <div class="answer"> </div>
+      <div class="answer"> </div>
+    </section>
+    <hr />
+    <section class="footer" id="footer">
+      <div class="version">VERSION 0.7</div>
+      <div class="links">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/srinidhiprao/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+          </li>
+          <li>
+            <a href="https://github.com/SrinidhiPRao" target="_blank" rel="noopener noreferrer">GITHUB</a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/u/SrinidhiPRao/" target="_blank" rel="noopener noreferrer">LEETCODE</a>
+          </li>
+        </ul>
+      </div>
+      <div class="status">
+        CURRENTLY: <span class="light"></span> AVAILABLE FOR WORK <br />
+        <div id="time"></div>
+        <div class="locale">Bangalore, India</div>
+      </div>
+    </section>
+    <section class="figure">SRINIDHI</section>
+  </main>
+  <script>
+    function toggleMenu() {
+      const overlay = document.getElementById("menuOverlay");
+      const btn = document.querySelector(".menu-btn");
+
+      overlay.classList.toggle("show");
+      btn.textContent = overlay.classList.contains("show") ? "CLOSE" : "MENU";
+    }
+
+    function updateBangaloreTime() {
+
+      const now = new Date();
+
+      const date = now.toLocaleDateString("en-US", {
+        timeZone: "Asia/Kolkata",
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+      });
+
+      const time = now.toLocaleTimeString("en-US", {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true
+      });
+
+      const bangaloreTime = `${date} ${time}`;
+      document.getElementById(
+        "time"
+      ).textContent = `${bangaloreTime}`;
+    }
+    // Close overlay on any menu link click
+    document.querySelectorAll(".menu-box").forEach((box) => {
+      box.addEventListener("click", () => {
+        const overlay = document.getElementById("menuOverlay");
+        overlay.classList.remove("show");
+
+        const menuBtn = document.querySelector(".menu-btn");
+        menuBtn.textContent = "MENU";
+      });
+    });
+
+    updateBangaloreTime();
+    setInterval(updateBangaloreTime, 59999);
+  </script>
+</body>
+
+</html>
