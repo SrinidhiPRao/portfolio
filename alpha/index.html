@@ -19,8 +19,19 @@
     <a href="#hero">
       <div class="material-symbols-outlined">bolt</div>
     </a>
-    <div class="navbar-items">MENU</div>
+    <button class="menu-btn" onclick="toggleMenu()">MENU</button>
   </div>
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-container">
+      <div class="menu-grid">
+        <a href="#hero" class="menu-box">HOME</a>
+        <a href="#projects" class="menu-box">PROJECTS</a>
+        <a href="#services" class="menu-box">SERVICES</a>
+        <a href="#contact" class="menu-box">CONTACT</a>
+      </div>
+    </div>
+  </div>
+
   <main class="scroll-container">
     <section class="hero" id="hero">
       <div class="tagline">
@@ -128,7 +139,16 @@
     <section class="figure">SRINIDHI</section>
   </main>
   <script>
+    function toggleMenu() {
+      const overlay = document.getElementById("menuOverlay");
+      const btn = document.querySelector(".menu-btn");
+
+      overlay.classList.toggle("show");
+      btn.textContent = overlay.classList.contains("show") ? "CLOSE" : "MENU";
+    }
+
     function updateBangaloreTime() {
+
       const now = new Date();
 
       const date = now.toLocaleDateString("en-US", {
@@ -150,6 +170,16 @@
         "time"
       ).textContent = `${bangaloreTime}`;
     }
+    // Close overlay on any menu link click
+    document.querySelectorAll(".menu-box").forEach((box) => {
+      box.addEventListener("click", () => {
+        const overlay = document.getElementById("menuOverlay");
+        overlay.classList.remove("show");
+
+        const menuBtn = document.querySelector(".menu-btn");
+        menuBtn.textContent = "MENU";
+      });
+    });
 
     updateBangaloreTime();
     setInterval(updateBangaloreTime, 59999);
